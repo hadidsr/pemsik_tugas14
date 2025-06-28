@@ -24,7 +24,7 @@ export default function Mahasiswa() {
   const rowsPerPage = 5;
 
   useEffect(() => {
-    axios.get('http://localhost:3001/mahasiswa').then((res) => setMahasiswa(res.data));
+    axios.get('https://eccd6277-afea-426b-aba1-422b4813e01d-00-2epbxcrcodpzx.sisko.replit.dev/mahasiswa').then((res) => setMahasiswa(res.data));
   }, []);
 
   const handleChange = (e) => {
@@ -43,13 +43,13 @@ export default function Mahasiswa() {
       if (editIndex !== null) {
         const confirm = await confirmSaveChanges();
         if (!confirm.isConfirmed) return;
-        await axios.put(`http://localhost:3001/mahasiswa/${formData.id}`, formData);
+        await axios.put(`https://eccd6277-afea-426b-aba1-422b4813e01d-00-2epbxcrcodpzx.sisko.replit.dev/mahasiswa/${formData.id}`, formData);
         const updated = [...mahasiswa];
         updated[editIndex] = formData;
         setMahasiswa(updated);
         toastUpdateSuccess();
       } else {
-        await axios.post('http://localhost:3001/mahasiswa', formData);
+        await axios.post('https://eccd6277-afea-426b-aba1-422b4813e01d-00-2epbxcrcodpzx.sisko.replit.dev/mahasiswa', formData);
         setMahasiswa([...mahasiswa, formData]);
         toastSaveSuccess();
       }
@@ -73,7 +73,7 @@ export default function Mahasiswa() {
     if (confirm.isConfirmed) {
       try {
         const deleted = mahasiswa[index];
-        await axios.delete(`http://localhost:3001/mahasiswa/${deleted.id}`);
+        await axios.delete(`https://eccd6277-afea-426b-aba1-422b4813e01d-00-2epbxcrcodpzx.sisko.replit.dev/mahasiswa/${deleted.id}`);
         setMahasiswa(mahasiswa.filter((_, i) => i !== index));
         toastDeleteSuccess();
       } catch (error) {
