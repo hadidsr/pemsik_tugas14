@@ -1,0 +1,110 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@example.com",
+      "password": "admin",
+      "role": "admin",
+      "permissions": [
+        "manage-dosen",
+        "manage-mahasiswa",
+        "manage-matakuliah",
+        "manage-kelas"
+      ]
+    },
+    {
+      "id": "2",
+      "email": "user@example.com",
+      "password": "user",
+      "role": "user",
+      "permissions": [
+        "view-mahasiswa",
+        "view-matakuliah"
+      ]
+    }
+  ],
+  "dosen": [
+    {
+      "id": "DSN001",
+      "nama": "Dr. Budi Santoso",
+      "maksSks": 12
+    },
+    {
+      "id": "DSN002",
+      "nama": "Thomas",
+      "maksSks": "4"
+    },
+    {
+      "id": "DSN003",
+      "nama": "Ahmad Sudarto",
+      "maksSks": "10"
+    }
+  ],
+  "mahasiswa": [
+    {
+      "id": "MHS001",
+      "nama": "Andi Wijaya",
+      "nim": "2112011234",
+      "maksSks": 18
+    },
+    {
+      "id": "MHS002",
+      "nama": "Samuel Joko",
+      "nim": "2112123131",
+      "maksSks": 20
+    },
+    {
+      "id": "MHS003",
+      "nama": "Hadi Rucky",
+      "status": true,
+      "maksSks": "22"
+    }
+  ],
+  "matakuliah": [
+    {
+      "id": "MK001",
+      "nama": "Pemrograman Web",
+      "sks": 3
+    },
+    {
+      "id": "MK002",
+      "nama": "Kalkulus",
+      "sks": 4
+    },
+    {
+      "id": "MK003",
+      "nama": "Matematika Diskrit",
+      "sks": "3"
+    }
+  ],
+  "kelas": [
+    {
+      "id": "1",
+      "nama": "Kelas A",
+      "matakuliahId": "MK001",
+      "dosenId": "DSN001",
+      "mahasiswaIds": [
+        "MHS001",
+        "MHS002"
+      ]
+    },
+    {
+      "id": "804f",
+      "nama": "A11.4452",
+      "matakuliahId": "MK002",
+      "dosenId": null,
+      "mahasiswaIds": [
+        "MHS002"
+      ]
+    },
+    {
+      "id": "2bed",
+      "nama": "A11.4567",
+      "matakuliahId": "MK003",
+      "dosenId": "DSN003",
+      "mahasiswaIds": [
+        "MHS003"
+      ]
+    }
+  ]
+}
